@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "git add --all && git commit -m update && git push && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/bersling/mathquill-typescript/issues"
   },
-  "homepage": "https://github.com/bersling/mathquill-typescript#readme"
+  "homepage": "https://github.com/bersling/mathquill-typescript#readme",
+  "dependencies": {
+    "@types/jquery": "^3.2.2",
+    "jquery": "^3.2.1"
+  }
 }
