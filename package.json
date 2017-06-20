@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "hwrld": "^1.0.0"
+    "@types/jquery": "^3.2.2",
+    "hwrld": "^1.0.0",
+    "jquery": "^3.2.1"
   }
 }
