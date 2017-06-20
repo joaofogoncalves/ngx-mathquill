@@ -1,7 +1,7 @@
 import * as $ from 'jquery'
 
 export namespace MathQuill {
-  function loadMathQuill() {
+  export function loadMathQuill() {
     loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
     loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
   }
