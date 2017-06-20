@@ -4,6 +4,7 @@ var $ = require("jquery");
 var MathQuillLoader;
 (function (MathQuillLoader) {
     function loadMathQuill(callback) {
+        console.log('loading!');
         loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
         loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
     }
