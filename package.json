@@ -1,4 +1,6 @@
 {
+  "name": "mathquill-typescript",
+  "version": "0.0.0",
   "dependencies": {
     "@types/jquery": "^3.2.2",
     "hwrld": "^1.0.0",
