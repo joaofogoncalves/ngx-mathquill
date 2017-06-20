@@ -7,6 +7,7 @@ var MathQuill;
         loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
         loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
     }
+    MathQuill.loadMathQuill = loadMathQuill;
 })(MathQuill = exports.MathQuill || (exports.MathQuill = {}));
 function loadCss(url) {
     var cssId = 'mathquill'; // you could encode the css path itself to generate id..
