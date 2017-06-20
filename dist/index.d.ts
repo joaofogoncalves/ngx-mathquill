@@ -1,4 +1,8 @@
 export declare namespace MathQuillLoader {
+    /**
+     * Sets up mathquill. When done returns the `window.MathQuill` object.
+     * @param callback
+     */
     function loadMathQuill(callback: (mathquill: IMathQuill) => any): void;
 }
 export interface IMathQuill {

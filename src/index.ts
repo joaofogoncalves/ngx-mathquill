@@ -1,6 +1,11 @@
 import * as $ from 'jquery'
 
 export namespace MathQuillLoader {
+
+  /**
+   * Sets up mathquill. When done returns the `window.MathQuill` object.
+   * @param callback
+   */
   export function loadMathQuill(callback: (mathquill: IMathQuill) => any): void {
     loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
     loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);

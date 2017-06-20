@@ -25,6 +25,9 @@ MathQuillLoader.loadMathQuill(mathquill => {
 });
 ```
 
+If you call the loader multiple times, it will just return
+the already initialized `window.MathQuill` object.
+
 ## Note
 
 Still in development, check back in a few weeks to find
