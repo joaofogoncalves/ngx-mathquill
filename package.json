@@ -13,12 +13,9 @@
     "url": "git+https://github.com/bersling/mathquill-typescript.git"
   },
   "keywords": [
-    "demo",
+    "mathquill",
     "typescript",
-    "library",
-    "hello",
-    "world",
-    "2017"
+    "wrapper"
   ],
   "author": "Daniel Niederberger <bersling@gmail.com>",
   "license": "MIT",
