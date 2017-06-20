@@ -32,3 +32,8 @@ the already initialized `window.MathQuill` object.
 
 Still in development, check back in a few weeks to find
 a more stable release.
+
+## Credits
+
+Thanks to [how-to-write-a-typescript-library.com](http://how-to-write-a-typescript-library.com)
+for a to-the-point tutorial on how to get started with a typescript library.
