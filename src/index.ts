@@ -1,10 +1,2 @@
-import {HelloWorld} from 'hwrld'
-import * as $ from 'jquery'
+export {HelloWorld} from './hello-world'
 
-HelloWorld.sayHello();
-
-export namespace logJquery {
-  export function logJquery () {
-    console.log($, $.ajax);
-  }
-}

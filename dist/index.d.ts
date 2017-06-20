@@ -1,3 +1,1 @@
-export declare namespace logJquery {
-    function logJquery(): void;
-}
+export { HelloWorld } from './hello-world';
