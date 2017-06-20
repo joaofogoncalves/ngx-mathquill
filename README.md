@@ -17,7 +17,11 @@ npm install mathquill-typescript
 ```
 import {MathQuillLoader} from 'mathquill-typescript';
 MathQuillLoader.loadMathQuill(mathquill => {
+
+  // do what you want here
+  // for example:
   console.log(mathquill.getInterface(2));
+
 });
 ```
 
