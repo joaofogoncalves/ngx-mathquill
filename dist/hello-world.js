@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const $ = require("jquery");
 var HelloWorld;
 (function (HelloWorld) {
     function sayHello() {
@@ -10,4 +11,8 @@ var HelloWorld;
         console.log('goodbye');
     }
     HelloWorld.sayGoodbye = sayGoodbye;
+    function logJquery() {
+        console.log($.ajax);
+    }
+    HelloWorld.logJquery = logJquery;
 })(HelloWorld = exports.HelloWorld || (exports.HelloWorld = {}));
