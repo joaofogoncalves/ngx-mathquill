@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pub": "git add --all && git commit -m update && git push && npm version patch && npm publish"
+    "pub": "tsc && git add --all && git commit -m update && git push && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",
