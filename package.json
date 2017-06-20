@@ -29,5 +29,8 @@
   "dependencies": {
     "@types/jquery": "^3.2.2",
     "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "express": "^4.15.3"
   }
 }

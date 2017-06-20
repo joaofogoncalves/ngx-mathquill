@@ -1,15 +1,9 @@
 import * as $ from 'jquery'
 
-declare var MathQuill;
-
 export namespace MathQuillLoader {
   export function loadMathQuill(callback: (mathquill: IMathQuill) => any): void {
-
-    console.log('loading!');
-
     loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
     loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
-
   }
 }
 
@@ -28,17 +22,15 @@ function loadCss(url: string): void {
 }
 
 function loadJs(url: string, callback: (mathquill: IMathQuill) => any): void {
-  if (!MathQuill) {
+  if (!(<any>window).MathQuill) {
     $.getScript( url, function( data, textStatus, jqxhr ) {
-      console.log( data ); // Data returned
+/*      console.log( data ); // Data returned
       console.log( textStatus ); // Success
-      console.log( jqxhr.status ); // 200
-      console.log( "Load was performed." );
-      console.log(MathQuillLoader);
-      callback(MathQuill);
+      console.log( jqxhr.status ); // 200*/
+      callback((<any>window).MathQuill);
     });
   } else {
-    callback(MathQuill);
+    callback((<any>window).MathQuill);
   }
 }
 
