@@ -9,7 +9,7 @@ var MathQuillLoader;
      */
     function loadMathQuill(callback) {
         loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
-        loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
+        loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.js', callback);
     }
     MathQuillLoader.loadMathQuill = loadMathQuill;
 })(MathQuillLoader = exports.MathQuillLoader || (exports.MathQuillLoader = {}));
