@@ -1,7 +1,7 @@
 ## Important Note
 
 Still in development, check back in a few weeks to find
-a more stable release.
+a more stable and useful release.
 
 # Mathquill-Typescript
 
