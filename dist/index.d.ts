@@ -36,17 +36,18 @@ export interface BaseMethods {
     latex: (latex?: string) => void | string;
 }
 export interface MathFieldMethods extends BaseMethods {
-    focus: () => void;
-    blur: () => void;
-    write: (latex: string) => void;
-    cmd: (latex: string) => void;
-    select: () => void;
-    clearSelection: () => void;
-    moveToLeftEnd: () => void;
-    moveToRightEnd: () => void;
-    movetoDirEnd: (direction: any) => void;
-    keystroke: (keys: string) => void;
-    typedText: (text: string) => void;
-    config: (config: MathQuillConfig) => void;
-    dropEmbedded: (pageX, pageY, options) => void;
+    focus: () => any;
+    blur: () => any;
+    write: (latex: string) => any;
+    cmd: (latex: string) => any;
+    select: () => any;
+    clearSelection: () => any;
+    moveToLeftEnd: () => any;
+    moveToRightEnd: () => any;
+    movetoDirEnd: (direction: any) => any;
+    keystroke: (keys: string) => any;
+    typedText: (text: string) => any;
+    config: (config: MathQuillConfig) => any;
+    dropEmbedded: (pageX, pageY, options) => any;
+    html: () => any;
 }
