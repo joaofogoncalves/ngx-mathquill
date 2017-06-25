@@ -5,6 +5,25 @@ offers types (of course) and an easier installation
 than the original mathquill library if you're
 using `npm`.
 
+**Important Note:** You need to have jquery "globally" installed for this
+library to work (like most jquery-dependent libraries).
+For example you can add it in `<head>` of your html.
+Or in webpack write configure something like this:
+
+```
+var webpack = require("webpack");
+
+    ...
+
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
+    ]
+```
+
+
 
 ## Installation
 
