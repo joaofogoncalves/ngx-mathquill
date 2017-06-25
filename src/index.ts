@@ -8,8 +8,12 @@ export namespace MathQuillLoader {
    */
   export function loadMathQuill(options: MqLoadingOptions, callback: (mathquill: IMathQuill) => any): void {
     const minString = options.mode === 'dev' ? '' : '.min';
-    loadCss(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.css`);
-    loadJs(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.js`, callback);
+    // loadCss(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.css`);
+    // loadJs(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.js`, callback);
+
+    loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
+    loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
+
   }
 }
 
