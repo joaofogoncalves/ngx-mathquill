@@ -7,9 +7,10 @@ var MathQuillLoader;
      * Sets up mathquill. When done returns the `window.MathQuill` object.
      * @param callback
      */
-    function loadMathQuill(callback) {
-        loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
-        loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
+    function loadMathQuill(options, callback) {
+        var minString = options.mode === 'dev' ? '' : '.min';
+        loadCss("https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill" + minString + ".css");
+        loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.js', callback);
     }
     MathQuillLoader.loadMathQuill = loadMathQuill;
 })(MathQuillLoader = exports.MathQuillLoader || (exports.MathQuillLoader = {}));
