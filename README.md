@@ -3,14 +3,20 @@
 Still in development, check back in a few weeks to find
 a more stable and useful release.
 
-# Mathquill-Typescript
+## Description
 
 Thin typescript wrapper around Mathquill. It
 offers types (of course) and an easier installation
 than the original mathquill library if you're
 using `npm`.
 
-**Important Note:** You need to have jquery "globally" installed for this
+## Installation
+
+Step 1)
+Get jquery
+
+
+You need to have jquery "globally" installed for this
 library to work (like most jquery-dependent libraries).
 For example you can add it in `<head>` of your html.
 Or in webpack write configure something like this:
@@ -41,8 +47,7 @@ Or in `.angular-cli.json`:
    ...
 ```
 
-## Installation
-
+Step 2)
 ```
 npm install mathquill-typescript
 ```
