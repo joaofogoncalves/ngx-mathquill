@@ -86,4 +86,6 @@ export interface MathFieldMethods extends BaseMethods {
   typedText: (text: string) => any;
   config: (config: MathQuillConfig) => any;
   dropEmbedded: (pageX, pageY, options) => any;
+
+  html: () => any;
 }
