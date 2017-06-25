@@ -23,7 +23,18 @@ var webpack = require("webpack");
     ]
 ```
 
-
+Or in `.angular-cli.json`:
+```
+{
+  ...
+  "apps": [
+    {
+      ...
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js"
+      ],
+   ...
+```
 
 ## Installation
 
