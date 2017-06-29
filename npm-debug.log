@@ -1,30 +1,121 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'version',
-1 verbose cli   'patch' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
 2 info using npm@3.10.10
 3 info using node@v6.11.0
-4 info git [ 'status', '--porcelain' ]
-5 verbose stack Error: Git working directory not clean.
-5 verbose stack M dist/index.d.ts
-5 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:247:19
-5 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
-5 verbose stack     at ChildProcess.exithandler (child_process.js:195:7)
-5 verbose stack     at emitTwo (events.js:106:13)
-5 verbose stack     at ChildProcess.emit (events.js:191:7)
-5 verbose stack     at maybeClose (internal/child_process.js:891:16)
-5 verbose stack     at Socket.<anonymous> (internal/child_process.js:342:11)
-5 verbose stack     at emitOne (events.js:96:13)
-5 verbose stack     at Socket.emit (events.js:188:7)
-5 verbose stack     at Pipe._handle.close [as _onclose] (net.js:497:12)
-6 verbose cwd /Users/Bersling/Desktop/IT-Projects/ts/mathquill-typescript
-7 error Darwin 16.5.0
-8 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "version" "patch"
-9 error node v6.11.0
-10 error npm  v3.10.10
-11 error Git working directory not clean.
-11 error M dist/index.d.ts
-12 error If you need help, you may report this error at:
-12 error     <https://github.com/npm/npm/issues>
-13 verbose exit [ 1, true ]
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Bersling/Desktop/IT-Projects/ts/mathquill-typescript',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Bersling/.npm/mathquill-typescript/2.0.8/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/Bersling/.npm correctMkdir not in flight; initializing
+10 info lifecycle mathquill-typescript@2.0.8~prepublish: mathquill-typescript@2.0.8
+11 silly lifecycle mathquill-typescript@2.0.8~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/Bersling/.npm/mathquill-typescript/2.0.8/package.tgz',
+12 verbose tar pack   '/Users/Bersling/Desktop/IT-Projects/ts/mathquill-typescript' ]
+13 verbose tarball /Users/Bersling/.npm/mathquill-typescript/2.0.8/package.tgz
+14 verbose folder /Users/Bersling/Desktop/IT-Projects/ts/mathquill-typescript
+15 verbose addLocalTarball adding from inside cache /Users/Bersling/.npm/mathquill-typescript/2.0.8/package.tgz
+16 verbose correctMkdir /Users/Bersling/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd mathquill-typescript@2.0.8
+18 verbose afterAdd /Users/Bersling/.npm/mathquill-typescript/2.0.8/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/Bersling/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/Bersling/.npm/mathquill-typescript/2.0.8/package/package.json written
+21 silly publish { name: 'mathquill-typescript',
+21 silly publish   version: '2.0.8',
+21 silly publish   description: 'A thin typescript wrapper around mathquill',
+21 silly publish   main: 'dist/index.js',
+21 silly publish   types: 'dist/index.d.ts',
+21 silly publish   scripts:
+21 silly publish    { test: 'mocha --reporter spec --timeout 15000  --compilers ts:ts-node/register \'**/*.test.ts\'',
+21 silly publish      pub: 'tsc && git add --all && git commit -m update && git push && npm version patch && npm publish',
+21 silly publish      start: 'node server.js' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/bersling/mathquill-typescript.git' },
+21 silly publish   keywords: [ 'mathquill', 'typescript', 'wrapper' ],
+21 silly publish   author: { name: 'Daniel Niederberger', email: 'bersling@gmail.com' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/bersling/mathquill-typescript/issues' },
+21 silly publish   homepage: 'https://github.com/bersling/mathquill-typescript#readme',
+21 silly publish   dependencies: { '@types/jquery': '^3.2.2', jquery: '1 - 3' },
+21 silly publish   devDependencies:
+21 silly publish    { '@types/chai': '^3.4.34',
+21 silly publish      '@types/mocha': '^2.2.32',
+21 silly publish      chai: '^3.5.0',
+21 silly publish      express: '^4.15.3',
+21 silly publish      'karma-mocha': '^1.3.0',
+21 silly publish      mocha: '^3.4.2',
+21 silly publish      'ts-node': '^1.6.1',
+21 silly publish      typescript: '^2.0.6' },
+21 silly publish   readme: '## Important Note\n\nStill in development, check back in a few weeks to find\na more stable and useful release.\n\n## Description\n\nThin typescript wrapper around Mathquill. It\noffers types (of course) and an easier installation\nthan the original mathquill library if you\'re\nusing `npm`.\n\n## Installation\n\nStep 1)\nGet jquery\n\n\nYou need to have jquery "globally" installed for this\nlibrary to work (like most jquery-dependent libraries).\nFor example you can add it in `<head>` of your html.\nOr in webpack write configure something like this:\n\n```\nvar webpack = require("webpack");\n\n    ...\n\n    plugins: [\n        new webpack.ProvidePlugin({\n            $: "jquery",\n            jQuery: "jquery"\n        })\n    ]\n```\n\nOr in `.angular-cli.json`:\n```\n{\n  ...\n  "apps": [\n    {\n      ...\n      "scripts": [\n        "../node_modules/jquery/dist/jquery.js"\n      ],\n   ...\n```\n\nStep 2)\n```\nnpm install mathquill-typescript\n```\n\n## Usage\n\n```\nimport {MathQuillLoader} from \'mathquill-typescript\';\nMathQuillLoader.loadMathQuill(mathquill => {\n\n  // do what you want here\n  // for example:\n  console.log(mathquill.getInterface(2));\n\n});\n```\n\nIf you call the loader multiple times, it will just return\nthe already initialized `window.MathQuill` object.\n\n\n## Credits\n\nThanks to [how-to-write-a-typescript-library.com](http://how-to-write-a-typescript-library.com)\nfor a to-the-point tutorial on how to get started with a typescript library.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '5558dcc645d9e145d45a947b9250e673f29adde1',
+21 silly publish   _id: 'mathquill-typescript@2.0.8',
+21 silly publish   _shasum: '8286256c341242ca57a76b52a6c9a4a967af151d',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name mathquill-typescript
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'mathquill-typescript',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'mathquill-typescript',
+26 silly mapToRegistry   name: 'mathquill-typescript',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/mathquill-typescript
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/Bersling/.npm/mathquill-typescript/2.0.8/package.tgz
+30 verbose request uri https://registry.npmjs.org/mathquill-typescript
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 1:47:37 PM
+33 verbose request using bearer token for auth
+34 verbose request id b7fb122f5056b2f9
+35 http request PUT https://registry.npmjs.org/mathquill-typescript
+36 http 403 https://registry.npmjs.org/mathquill-typescript
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 29 Jun 2017 11:47:38 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-hhn1525-HHN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1498736858.649825,VS0,VE1047',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/Bersling/.npm/registry.npmjs.org/mathquill-typescript on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 2.0.8." : mathquill-typescript
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid mathquill-typescript
+43 verbose cwd /Users/Bersling/Desktop/IT-Projects/ts/mathquill-typescript
+44 error Darwin 16.5.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.11.0
+47 error npm  v3.10.10
+48 error code E403
+49 error "You cannot publish over the previously published version 2.0.8." : mathquill-typescript
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

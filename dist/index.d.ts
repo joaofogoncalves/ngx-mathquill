@@ -36,7 +36,7 @@ export interface BaseMethods {
     revert: () => HTMLElement;
     reflow: () => void;
     el: () => HTMLElement;
-    latex: (latex?: string) => this | string;
+    latex: (latex?: string) => any;
 }
 export interface MathFieldMethods extends BaseMethods {
     focus: () => this;
