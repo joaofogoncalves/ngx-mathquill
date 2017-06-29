@@ -1,4 +1,4 @@
 import {MathQuillLoader} from './index';
-MathQuillLoader.loadMathQuill(mathquill => {
+MathQuillLoader.loadMathQuill({}, mathquill => {
   console.log(mathquill);
 });

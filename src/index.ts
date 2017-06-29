@@ -6,10 +6,19 @@ export namespace MathQuillLoader {
    * Sets up mathquill. When done returns the `window.MathQuill` object.
    * @param callback
    */
-  export function loadMathQuill(callback: (mathquill: IMathQuill) => any): void {
-    loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
-    loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
+  export function loadMathQuill(options: MqLoadingOptions, callback: (mathquill: IMathQuill) => this): void {
+    const minString = options.mode === 'dev' ? '' : '.min';
+    loadCss(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.css`);
+    loadJs(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.js`, callback);
+
+    //loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
+    //loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
+
   }
+}
+
+export interface MqLoadingOptions {
+  mode?: 'dev' | 'prod'
 }
 
 function loadCss(url: string): void {
@@ -59,9 +68,9 @@ export interface MathQuillConfig {
   autoOperatorNames: string,
   substituteTextArea: () => HTMLElement;
   handlers: {
-    edit: (mathField) => any;
-    upOutOf: (mathField) => any;
-    moveOutOf: (dir, mathField) => any;
+    edit: (mathField) => this;
+    upOutOf: (mathField) => this;
+    moveOutOf: (dir, mathField) => this;
   }
 }
 
@@ -69,23 +78,23 @@ export interface BaseMethods {
   revert: () => HTMLElement;
   reflow: () => void;
   el: () => HTMLElement;
-  latex: (latex?: string) => any;
+  latex: (latex?: string) => this;
 }
 
 export interface MathFieldMethods extends BaseMethods {
-  focus: () => any;
-  blur: () => any;
-  write: (latex: string) => any;
-  cmd: (latex: string) => any;
-  select: () => any;
-  clearSelection: () => any;
-  moveToLeftEnd: () => any;
-  moveToRightEnd: () => any;
-  movetoDirEnd: (direction: any) => any;
-  keystroke: (keys: string) => any;
-  typedText: (text: string) => any;
-  config: (config: MathQuillConfig) => any;
-  dropEmbedded: (pageX, pageY, options) => any;
+  focus: () => this;
+  blur: () => this;
+  write: (latex: string) => this;
+  cmd: (latex: string) => this;
+  select: () => this;
+  clearSelection: () => this;
+  moveToLeftEnd: () => this;
+  moveToRightEnd: () => this;
+  movetoDirEnd: (direction: this) => this;
+  keystroke: (keys: string) => this;
+  typedText: (text: string) => this;
+  config: (config: MathQuillConfig) => this;
+  dropEmbedded: (pageX, pageY, options) => this;
 
-  html: () => any;
+  html: () => this;
 }
