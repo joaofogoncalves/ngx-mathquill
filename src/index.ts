@@ -78,7 +78,7 @@ export interface BaseMethods {
   revert: () => HTMLElement;
   reflow: () => void;
   el: () => HTMLElement;
-  latex: (latex?: string) => this;
+  latex: (latex?: string) => this | string;
 }
 
 export interface MathFieldMethods extends BaseMethods {
@@ -96,5 +96,5 @@ export interface MathFieldMethods extends BaseMethods {
   config: (config: MathQuillConfig) => this;
   dropEmbedded: (pageX, pageY, options) => this;
 
-  html: () => this;
+  html: () => any;
 }
