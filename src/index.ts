@@ -57,20 +57,20 @@ export interface IMathQuill {
 }
 
 export interface MathQuillConfig {
-  spaceBehavesLikeTab: boolean,
-  leftRightIntoCmdGoes: 'up' | 'down',
-  restrictMismatchedBrackets: boolean,
-  sumStartsWithNEquals: boolean,
-  supSubsRequireOperand: boolean,
-  charsThatBreakOutOfSupSub: string,
-  autoSubscriptNumerals: boolean,
-  autoCommands: string,
-  autoOperatorNames: string,
-  substituteTextArea: () => HTMLElement;
-  handlers: {
-    edit: (mathField) => this;
-    upOutOf: (mathField) => this;
-    moveOutOf: (dir, mathField) => this;
+  spaceBehavesLikeTab?: boolean,
+  leftRightIntoCmdGoes?: 'up' | 'down',
+  restrictMismatchedBrackets?: boolean,
+  sumStartsWithNEquals?: boolean,
+  supSubsRequireOperand?: boolean,
+  charsThatBreakOutOfSupSub?: string,
+  autoSubscriptNumerals?: boolean,
+  autoCommands?: string,
+  autoOperatorNames?: string,
+  substituteTextArea?: () => HTMLElement;
+  handlers?: {
+    edit?: (mathField) => this;
+    upOutOf?: (mathField) => this;
+    moveOutOf?: (dir, mathField) => this;
   }
 }
 
