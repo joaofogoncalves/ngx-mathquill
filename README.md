@@ -69,6 +69,18 @@ MathQuillLoader.loadMathQuill(mathquill => {
 If you call the loader multiple times, it will just return
 the already initialized `window.MathQuill` object.
 
+## Angular assets
+```
+"assets": [
+  "src/assets",
+  "src/favicon.ico",
+  {
+    "glob": "**/*",
+    "input": "./node_modules/ngx-mathquill/mathquill/",
+    "output": "./mathquill/"
+  }
+],
+```
 
 ## Credits
 

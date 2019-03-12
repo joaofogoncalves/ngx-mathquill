@@ -3,10 +3,7 @@ export declare namespace MathQuillLoader {
      * Sets up mathquill. When done returns the `window.MathQuill` object.
      * @param callback
      */
-    function loadMathQuill(options: MqLoadingOptions, callback: (mathquill: IMathQuill) => any): void;
-}
-export interface MqLoadingOptions {
-    mode?: 'dev' | 'prod';
+    function loadMathQuill(callback: (mathquill: IMathQuill) => any): void;
 }
 export interface IMathQuill {
     StaticMath: (htmlElement: HTMLElement) => BaseMethods;

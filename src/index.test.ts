@@ -7,10 +7,9 @@ const expect = chai.expect;
 describe('Index', () => {
 
   it('should be able fetch mathquill', () => {
-    MathQuillLoader.loadMathQuill({}, mathquill => {
+    MathQuillLoader.loadMathQuill(mathquill => {
       expect(mathquill).to.exist;
     });
   });
 
 });
-

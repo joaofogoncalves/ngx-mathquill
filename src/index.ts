@@ -1,25 +1,18 @@
 import * as $ from 'jquery'
 
+
 export namespace MathQuillLoader {
 
   /**
    * Sets up mathquill. When done returns the `window.MathQuill` object.
    * @param callback
    */
-  export function loadMathQuill(options: MqLoadingOptions, callback: (mathquill: IMathQuill) => any): void {
-    const minString = options.mode === 'dev' ? '' : '.min';
-    loadCss(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.css`);
-    loadJs(`https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill${minString}.js`, callback);
-
-    //loadCss('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.css');
-    //loadJs('https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.10.1/mathquill.min.js', callback);
-
+  export function loadMathQuill(callback: (mathquill: IMathQuill) => any): void {
+    loadCss(`mathquill/mathquill.css`);
+    loadJs(`mathquill/mathquill.min.js`, callback);
   }
 }
 
-export interface MqLoadingOptions {
-  mode?: 'dev' | 'prod'
-}
 
 function loadCss(url: string): void {
   const cssId = 'mathquill';  // you could encode the css path itself to generate id..
