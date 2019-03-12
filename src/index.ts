@@ -50,7 +50,7 @@ function loadJs(url: string, callback: (mathquill: IMathQuill) => any): void {
 
 export interface IMathQuill {
   StaticMath: (htmlElement: HTMLElement) => BaseMethods;
-  MathField: (htmlElement: HTMLElement, config?: IMathQuill) => MathFieldMethods;
+  MathField: (htmlElement: HTMLElement, config?: MathQuillConfig) => MathFieldMethods;
   getInterface: (version: 1 | 2) => IMathQuill;
   noConflict: () => IMathQuill;
   config: (MathQuillConfig) => void;
@@ -68,9 +68,9 @@ export interface MathQuillConfig {
   autoOperatorNames?: string,
   substituteTextArea?: () => HTMLElement;
   handlers?: {
-    edit?: (mathField) => this;
-    upOutOf?: (mathField) => this;
-    moveOutOf?: (dir, mathField) => this;
+    edit?: (mathField) => any;
+    upOutOf?: (mathField) => any;
+    moveOutOf?: (dir, mathField) => any;
   }
 }
 

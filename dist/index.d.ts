@@ -10,26 +10,26 @@ export interface MqLoadingOptions {
 }
 export interface IMathQuill {
     StaticMath: (htmlElement: HTMLElement) => BaseMethods;
-    MathField: (htmlElement: HTMLElement, config?: IMathQuill) => MathFieldMethods;
+    MathField: (htmlElement: HTMLElement, config?: MathQuillConfig) => MathFieldMethods;
     getInterface: (version: 1 | 2) => IMathQuill;
     noConflict: () => IMathQuill;
-    config: (MathQuillConfig) => void;
+    config: (MathQuillConfig: any) => void;
 }
 export interface MathQuillConfig {
-    spaceBehavesLikeTab: boolean;
-    leftRightIntoCmdGoes: 'up' | 'down';
-    restrictMismatchedBrackets: boolean;
-    sumStartsWithNEquals: boolean;
-    supSubsRequireOperand: boolean;
-    charsThatBreakOutOfSupSub: string;
-    autoSubscriptNumerals: boolean;
-    autoCommands: string;
-    autoOperatorNames: string;
-    substituteTextArea: () => HTMLElement;
-    handlers: {
-        edit: (mathField) => this;
-        upOutOf: (mathField) => this;
-        moveOutOf: (dir, mathField) => this;
+    spaceBehavesLikeTab?: boolean;
+    leftRightIntoCmdGoes?: 'up' | 'down';
+    restrictMismatchedBrackets?: boolean;
+    sumStartsWithNEquals?: boolean;
+    supSubsRequireOperand?: boolean;
+    charsThatBreakOutOfSupSub?: string;
+    autoSubscriptNumerals?: boolean;
+    autoCommands?: string;
+    autoOperatorNames?: string;
+    substituteTextArea?: () => HTMLElement;
+    handlers?: {
+        edit?: (mathField: any) => any;
+        upOutOf?: (mathField: any) => any;
+        moveOutOf?: (dir: any, mathField: any) => any;
     };
 }
 export interface BaseMethods {
@@ -51,6 +51,6 @@ export interface MathFieldMethods extends BaseMethods {
     keystroke: (keys: string) => this;
     typedText: (text: string) => this;
     config: (config: MathQuillConfig) => this;
-    dropEmbedded: (pageX, pageY, options) => this;
+    dropEmbedded: (pageX: any, pageY: any, options: any) => this;
     html: () => any;
 }

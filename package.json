@@ -1,6 +1,6 @@
 {
-  "name": "mathquill-typescript",
-  "version": "2.0.8",
+  "name": "ngx-mathquill",
+  "version": "1.0.0",
   "description": "A thin typescript wrapper around mathquill",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bersling/mathquill-typescript.git"
+    "url": "git+https://github.com:joaofogoncalves/ngx-mathquill.git"
   },
   "keywords": [
     "mathquill",
     "typescript",
     "wrapper"
   ],
-  "author": "Daniel Niederberger <bersling@gmail.com>",
+  "author": "João Gonçalves <joao.f.o.goncalves@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bersling/mathquill-typescript/issues"
+    "url": "https://github.com:joaofogoncalves/ngx-mathquillissues"
   },
-  "homepage": "https://github.com/bersling/mathquill-typescript#readme",
+  "homepage": "https://github.com:joaofogoncalves/ngx-mathquill#readme",
   "dependencies": {
     "@types/jquery": "^3.2.2",
     "jquery": "1 - 3"

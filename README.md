@@ -49,7 +49,7 @@ Or in `.angular-cli.json`:
 
 Step 2)
 ```
-npm install mathquill-typescript
+npm install ngx-mathquill
 ```
 
 ## Usage
@@ -71,5 +71,4 @@ the already initialized `window.MathQuill` object.
 
 ## Credits
 
-Thanks to [how-to-write-a-typescript-library.com](http://how-to-write-a-typescript-library.com)
-for a to-the-point tutorial on how to get started with a typescript library.
+Thanks to [JayendharPrakash/mathquill-typescript](https://github.com/JayendharPrakash/mathquill-typescript)
