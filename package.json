@@ -4,13 +4,9 @@
   "description": "A thin typescript wrapper around mathquill",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "src/mathquill/**/*"
-  ],
   "scripts": {
     "test": "mocha --reporter spec --timeout 15000  --compilers ts:ts-node/register '**/*.test.ts'",
     "pub": "tsc && git add --all && git commit -m update && git push && npm version patch && npm publish",
-    "build": "./node_modules/.bin/webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -42,7 +38,5 @@
     "mocha": "^3.4.2",
     "ts-node": "^1.6.1",
     "typescript": "^2.0.6",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
   }
 }
