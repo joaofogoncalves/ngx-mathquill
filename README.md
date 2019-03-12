@@ -20,6 +20,7 @@ You need to have jquery "globally" installed for this
 library to work (like most jquery-dependent libraries).
 For example you can add it in `<head>` of your html.
 Or in webpack write configure something like this:
+Work is in progress to fork Mathquill and remove this dependency
 
 ```
 var webpack = require("webpack");
@@ -34,7 +35,7 @@ var webpack = require("webpack");
     ]
 ```
 
-Or in `.angular-cli.json`:
+Or in `.angular.json`:
 ```
 {
   ...
@@ -55,7 +56,7 @@ npm install ngx-mathquill
 ## Usage
 
 ```
-import {MathQuillLoader} from 'mathquill-typescript';
+import {MathQuillLoader} from 'ngx-mathquill';
 MathQuillLoader.loadMathQuill(mathquill => {
 
   // do what you want here

@@ -4,6 +4,9 @@
   "description": "A thin typescript wrapper around mathquill",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+    "directories": {
+      "lib": "lib"
+    },
   "scripts": {
     "test": "mocha --reporter spec --timeout 15000  --compilers ts:ts-node/register '**/*.test.ts'",
     "pub": "tsc && git add --all && git commit -m update && git push && npm version patch && npm publish"
