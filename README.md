@@ -5,7 +5,7 @@ a more stable and useful release.
 
 ## Description
 
-Thin typescript wrapper around Mathquill. It
+Thin typescript wrapper around Mathquill (from matrix branch). It
 offers types (of course) and an easier installation
 than the original mathquill library if you're
 using `npm`.
