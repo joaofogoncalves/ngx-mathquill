@@ -62,6 +62,7 @@ export interface MathQuillConfig {
   substituteTextArea?: () => HTMLElement;
   handlers?: {
     edit?: (mathField) => any;
+    enter?: (mathField) => any;
     upOutOf?: (mathField) => any;
     moveOutOf?: (dir, mathField) => any;
   }
