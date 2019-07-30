@@ -11,6 +11,14 @@ export interface IMathQuill {
     getInterface: (version: 1 | 2) => IMathQuill;
     noConflict: () => IMathQuill;
     config: (MathQuillConfig: any) => void;
+    getLatexMathParser: () => LatexMathParser;
+}
+export interface LatexMathParser extends Parser {
+    commandToBlock: (cmd: any) => any;
+    joinBlocks: (blocks: any[]) => any;
+}
+export interface Parser {
+    parse: (stream: string) => string;
 }
 export interface MathQuillConfig {
     spaceBehavesLikeTab?: boolean;
