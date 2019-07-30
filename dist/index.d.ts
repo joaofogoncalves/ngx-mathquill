@@ -18,7 +18,7 @@ export interface LatexMathParser extends Parser {
     joinBlocks: (blocks: any[]) => any;
 }
 export interface Parser {
-    parse: (stream: string) => string;
+    parse: (stream: string) => any;
 }
 export interface MathQuillConfig {
     spaceBehavesLikeTab?: boolean;
