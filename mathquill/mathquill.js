@@ -1157,7 +1157,7 @@ function getInterface(v) {
   return MQ;
 }
 
-MathQuill.latexMathParser = function() {
+MathQuill.getLatexMathParser = function() {
   return latexMathParser;
 };
 
