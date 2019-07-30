@@ -1157,6 +1157,10 @@ function getInterface(v) {
   return MQ;
 }
 
+MathQuill.getLatexMathParser = function () {
+  return latexMathParser;
+};
+
 MathQuill.noConflict = function() {
   window.MathQuill = origMathQuill;
   return MathQuill;

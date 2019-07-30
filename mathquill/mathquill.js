@@ -361,7 +361,7 @@ var Node = P(function(_) {
   _.isEmpty = function() {
     return this.ends[L] === 0 && this.ends[R] === 0;
   };
-
+  
   _.isStyleBlock = function() {
     return false;
   };
@@ -1157,7 +1157,7 @@ function getInterface(v) {
   return MQ;
 }
 
-MathQuill.getLatexMathParser = function() {
+MathQuill.getLatexMathParser = function () {
   return latexMathParser;
 };
 
@@ -1165,7 +1165,6 @@ MathQuill.noConflict = function() {
   window.MathQuill = origMathQuill;
   return MathQuill;
 };
-Mat
 var origMathQuill = window.MathQuill;
 window.MathQuill = MathQuill;
 
@@ -5014,7 +5013,7 @@ LatexCmds.alef = LatexCmds.alefsym = LatexCmds.aleph = LatexCmds.alephsym =
 LatexCmds.xist = //LOL
 LatexCmds.xists = LatexCmds.exist = LatexCmds.exists =
   bind(VanillaSymbol,'\\exists ','&exist;');
-
+  
 LatexCmds.nexists = LatexCmds.nexist =
       bind(VanillaSymbol, '\\nexists ', '&#8708;');
 
@@ -5492,7 +5491,7 @@ var PlusMinus = P(BinaryOperator, function(_) {
 
       return 'mq-binary-operator';
     };
-
+    
     if (dir === R) return; // ignore if sibling only changed on the right
     this.jQ[0].className = determineOpClassType(this);
     return this;
